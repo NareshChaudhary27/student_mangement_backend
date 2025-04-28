@@ -9,12 +9,12 @@ const app = express();
 
 
 app.use(cors());
-app.use(express.json());
+app.use(express.json());  
 app.use(express.static("public"));
 
 mongoose
   .connect(
-    process.env.MONGODB_URI || "mongodb://localhost:27017/student_management",
+    process.env.MONGODB_URI,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
